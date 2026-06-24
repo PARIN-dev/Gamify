@@ -18,7 +18,8 @@ const App = () => {
           Aside
         </GridItem>
         </Stack>
-        <GridItem area="main" bg="red">
+        <GridItem area="main">
+          
         </GridItem>
       </Grid>
     </div>
