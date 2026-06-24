@@ -19,7 +19,7 @@ const App = () => {
         </GridItem>
         </Stack>
         <GridItem area="main">
-          
+           {/* <GameGrid></GameGrid> */}
         </GridItem>
       </Grid>
     </div>
