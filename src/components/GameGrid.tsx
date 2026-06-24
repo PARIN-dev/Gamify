@@ -1,26 +1,7 @@
-import apiClient from '@/services/api-client';
-import type { AxiosError } from 'axios';
-import React, { useEffect, useState } from 'react'
-
-interface Game{
-    id: number,
-    name : string
-}
-
-interface FetchGameResponse{
-    count: number,
-    results: Game[]
-}
+import useGame from "@/assets/hooks/useGame";
 
 const GameGrid = () => {
-    const [games ,setGames] = useState<Game[]>([]);
-    const [error , setError] = useState('');
-
-    useEffect(()=> {
-        apiClient.get<FetchGameResponse>('/games')
-        .then(res => setGames(res.data.results))
-        .catch((err : AxiosError) => setError(err.message))
-    },[])
+    const {games , error} = useGame();
   return (
     <>
     {error && <p>{error}</p>}
