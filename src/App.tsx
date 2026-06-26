@@ -5,6 +5,7 @@ import GenereList from "./components/GenereList";
 import { LuGalleryHorizontal } from "react-icons/lu";
 import { useState } from "react";
 import type { Genre } from "./assets/hooks/useGeneres";
+import PlatformSelector from "./components/PlatformSelector";
 const App = () => {
   const  [selectedGenre , setSelectedGenre] = useState<Genre | null>(null);
   return (
@@ -28,6 +29,7 @@ const App = () => {
         </GridItem>
         </Stack>
         <GridItem area="main">
+          <PlatformSelector/>
            {/* <GameGrid selectGenre={selectedGenre}></GameGrid> */}
         </GridItem>
       </Grid>
