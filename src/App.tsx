@@ -6,8 +6,10 @@ import { LuGalleryHorizontal } from "react-icons/lu";
 import { useState } from "react";
 import type { Genre } from "./assets/hooks/useGeneres";
 import PlatformSelector from "./components/PlatformSelector";
+import type { Platform } from "./assets/hooks/useGame";
 const App = () => {
   const  [selectedGenre , setSelectedGenre] = useState<Genre | null>(null);
+  const [selectedPlatform , setSelectedPlatform] = useState<Platform | null>(null);
   return (
     <div>
       <Grid
@@ -29,8 +31,8 @@ const App = () => {
         </GridItem>
         </Stack>
         <GridItem area="main">
-          <PlatformSelector/>
-           {/* <GameGrid selectGenre={selectedGenre}></GameGrid> */}
+          <PlatformSelector selectPlatform={selectedPlatform} onSelectPlatform={(platform) => setSelectedPlatform(platform)}/>
+           {/* <GameGrid selectPlatform={selectedPlatform} selectGenre={selectedGenre}></GameGrid> */}
         </GridItem>
       </Grid>
     </div>
