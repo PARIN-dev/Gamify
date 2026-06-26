@@ -8,6 +8,7 @@ interface Props{
 
 const CriticScore = ({criticscore}:Props) => {
     let color = criticscore> 90 ? 'blue' : criticscore > 75 ? 'green' : criticscore > 60 ? 'yellow' : 'red';
+    if (!criticscore) return null;
   return (
     <Badge size ="md" paddingX={2} borderRadius="4px" colorPalette={color} variant='outline'>
         <HStack>
