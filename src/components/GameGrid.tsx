@@ -14,19 +14,20 @@ const GameGrid = () => {
       {error && <p>{error}</p>}
       <SimpleGrid
         column={3}
-        gapX={10}
+        gapX={3}
+        gapY={3}
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
         padding="10px"
       >
         {isLoading &&
           skeleton.map((s) => (
-            <GameCardContainer>
+            <GameCardContainer key={s}>
               <GameCardSkeleton></GameCardSkeleton>
             </GameCardContainer>
           ))}
         {data.map((game) => (
-          <GameCardContainer>
-            <GameCard key={game.id} game={game}></GameCard>
+          <GameCardContainer key={game.id}>
+            <GameCard game={game}></GameCard>
           </GameCardContainer>
         ))}
       </SimpleGrid>
