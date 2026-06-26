@@ -24,7 +24,7 @@ const App = () => {
         </GridItem>
         <Stack hideBelow="lg">
         <GridItem area="aside" paddingX={5}  >
-          {/* <GenereList onSelectGenre={(genre) => setSelectedGenre(genre)}></GenereList> */}
+          {/* <GenereList onSelectGenre={(genre) => setSelectedGenre(genre)} selectedGenre={selectedGenre}></GenereList> */}
         </GridItem>
         </Stack>
         <GridItem area="main">
