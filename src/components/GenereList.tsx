@@ -1,9 +1,11 @@
 import useGenres from '@/assets/hooks/useGeneres'
 import getCroppedUrl from '@/services/image-url';
-import { HStack, Image , List, Text } from '@chakra-ui/react';
+import { HStack, Image , List, Spinner, Text } from '@chakra-ui/react';
 
 const GenereList = () => {
-  const {data} = useGenres();
+  const {data , isLoading , error} = useGenres();
+  if(error) return null;
+  if(isLoading) return <Spinner></Spinner>
   return (
     <List.Root as={"ul"} listStyleType={"none"}>
       {data.map(genere => <List.Item key={genere.id} paddingY={"5px"}>
