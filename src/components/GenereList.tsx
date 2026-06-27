@@ -13,7 +13,7 @@ const GenereList = ({ selectedGenre, onSelectGenre }: Props) => {
   if (isLoading) return <Spinner></Spinner>;
   return (
     <>
-    <Heading fontSize={"2xl"} marginBottom={2.5}>Genres</Heading>
+    <Heading fontSize={"2xl"} marginBottom={2.5} >Genres</Heading>
     <List.Root as={"ul"} listStyleType={"none"} overflow={"hidden"}>
       {data.map((genere) => (
         <List.Item key={genere.id} paddingY={"5px"}>
