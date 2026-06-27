@@ -45,11 +45,11 @@ const App = () => {
         </GridItem>
         <Stack hideBelow="lg">
           <GridItem area="aside" paddingX={5}>
-            {/* <GenereList onSelectGenre={(genre) => setGameQuery({...gameQuery , genre})} selectedGenre={gameQuery.genre}></GenereList> */}
+            <GenereList onSelectGenre={(genre) => setGameQuery({...gameQuery , genre})} selectedGenre={gameQuery.genre}></GenereList>
           </GridItem>
         </Stack>
         <GridItem area="main">
-          <Box paddingLeft={2}>
+          <Box paddingLeft={2 }>
             <GameHeading gameQuery={gameQuery}></GameHeading>
             <HStack spaceX={5} marginBottom={5}>
               <PlatformSelector selectPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({...gameQuery , platform})}/>
