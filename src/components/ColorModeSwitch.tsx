@@ -7,18 +7,18 @@ const ColorModeSwitch = () => {
   const {colorMode ,toggleColorMode} = useColorMode();
 
   return (
-    <HStack>
+    <HStack flexShrink={2}>
       <Switch.Root checked = {colorMode==='dark'} onCheckedChange={toggleColorMode}>
         <Switch.HiddenInput />
         <Switch.Control>
           <Switch.Thumb />
-          <Switch.Indicator fallback={<Icon as={FaMoon} color="gray.400" />}>
+          <Switch.Indicator fallback={<Icon as={FaMoon} color="gray.400"/>} flexShrink={"2"}>
             <Icon as={FaSun} color="yellow.400" />
           </Switch.Indicator>
         </Switch.Control>
         <Switch.Label />
       </Switch.Root>
-      <Text>{colorMode === 'dark' ? 'Dark Mode' : 'Light Mode'}</Text>
+      <Text flexGrow={"2"} whiteSpace={"nowrap"} padding={"0px"}>{colorMode === 'dark' ? 'Dark Mode' : 'Light Mode'}</Text>
     </HStack>
   );
 };

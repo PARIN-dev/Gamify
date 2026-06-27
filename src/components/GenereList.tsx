@@ -27,7 +27,7 @@ const GenereList = ({ selectedGenre, onSelectGenre }: Props) => {
               fontSize={"lg"}
               variant={"ghost"}
               justifyContent={"flex-start"}
-              whiteSpace={"normal"}
+              whiteSpace={"wrap"}
               onClick={() => onSelectGenre(genere)}
             >
               {genere.name}
