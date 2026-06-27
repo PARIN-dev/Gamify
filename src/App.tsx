@@ -6,7 +6,6 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
-import GameGrid from "./components/GameGrid";
 import GenereList from "./components/GenereList";
 import { useState } from "react";
 import type { Genre } from "./hooks/useGeneres";
@@ -53,7 +52,7 @@ const App = () => {
                 <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrders={(sortOrder) => setGameQuery({...gameQuery , sortOrder})}></SortSelector>
               </HStack>
             </Box>
-            <GameGrid gameQuery={gameQuery}></GameGrid> 
+            {/* <GameGrid gameQuery={gameQuery}></GameGrid>  */}
           </GridItem>
         </Grid>
       </div>
