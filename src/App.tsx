@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Grid,
   GridItem,
@@ -15,6 +16,7 @@ import type { Genre } from "./hooks/useGeneres";
 import PlatformSelector from "./components/PlatformSelector";
 import type { Platform } from "./hooks/useGame";
 import SortSelector from "./components/SortSelector";
+import GameHeading from "./components/GameHeading";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -43,15 +45,18 @@ const App = () => {
         </GridItem>
         <Stack hideBelow="lg">
           <GridItem area="aside" paddingX={5}>
-            <GenereList onSelectGenre={(genre) => setGameQuery({...gameQuery , genre})} selectedGenre={gameQuery.genre}></GenereList>
+            {/* <GenereList onSelectGenre={(genre) => setGameQuery({...gameQuery , genre})} selectedGenre={gameQuery.genre}></GenereList> */}
           </GridItem>
         </Stack>
         <GridItem area="main">
-          <HStack spaceX={5} paddingLeft={2} marginBottom={5}>
-            <PlatformSelector selectPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({...gameQuery , platform})}/>
-            <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrders={(sortOrder) => setGameQuery({...gameQuery , sortOrder})}></SortSelector>
-          </HStack>
-          <GameGrid gameQuery={gameQuery}></GameGrid>
+          <Box paddingLeft={2}>
+            <GameHeading gameQuery={gameQuery}></GameHeading>
+            <HStack spaceX={5} marginBottom={5}>
+              <PlatformSelector selectPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({...gameQuery , platform})}/>
+              <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrders={(sortOrder) => setGameQuery({...gameQuery , sortOrder})}></SortSelector>
+            </HStack>
+          </Box>
+          {/* <GameGrid gameQuery={gameQuery}></GameGrid>  */}
         </GridItem>
       </Grid>
     </div>
