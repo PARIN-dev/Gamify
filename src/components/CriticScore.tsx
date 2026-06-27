@@ -1,5 +1,4 @@
 import { Badge, HStack } from '@chakra-ui/react';
-import React from 'react'
 import { FaStar } from 'react-icons/fa';
 
 interface Props{
