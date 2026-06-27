@@ -45,7 +45,7 @@ const App = () => {
         </GridItem>
         <Stack hideBelow="lg">
           <GridItem area="aside" paddingX={5}>
-            <GenereList onSelectGenre={(genre) => setGameQuery({...gameQuery , genre})} selectedGenre={gameQuery.genre}></GenereList>
+            {/* <GenereList onSelectGenre={(genre) => setGameQuery({...gameQuery , genre})} selectedGenre={gameQuery.genre}></GenereList> */}
           </GridItem>
         </Stack>
         <GridItem area="main">
