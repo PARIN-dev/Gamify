@@ -20,7 +20,7 @@ const GameGrid = ({ gameQuery }: Props) => {
       {error && <p>{error}</p>}
       <SimpleGrid
         column={3}
-        gapX={3}
+        gapX={6}
         gapY={3}
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
         padding="10px"
