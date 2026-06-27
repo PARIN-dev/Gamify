@@ -1,6 +1,6 @@
 import useGenres, { type Genre } from "@/hooks/useGeneres";
 import getCroppedUrl from "@/services/image-url";
-import { Button, Heading, HStack, Image, List, Spinner, Text } from "@chakra-ui/react";
+import { Button, Heading, HStack, Image, List, Spinner } from "@chakra-ui/react";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
@@ -29,6 +29,7 @@ const GenereList = ({ selectedGenre, onSelectGenre }: Props) => {
               flex={1}
               fontSize={"lg"}
               variant={"ghost"}
+              _hover={{ bg: "hover" }}
               whiteSpace={"normal"}
               onClick={() => onSelectGenre(genere)}
             >
