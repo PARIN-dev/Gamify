@@ -1,4 +1,4 @@
-import type { Platform } from "@/assets/hooks/useGame";
+import type { Platform } from "@/hooks/useGame";
 import { HStack, Icon } from "@chakra-ui/react";
 import {
   FaWindows,
