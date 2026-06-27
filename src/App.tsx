@@ -2,14 +2,20 @@ import { Button, Grid, GridItem, SelectClearTrigger, Show, Stack } from "@chakra
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenereList from "./components/GenereList";
-import { LuGalleryHorizontal } from "react-icons/lu";
 import { useState } from "react";
 import type { Genre } from "./assets/hooks/useGeneres";
 import PlatformSelector from "./components/PlatformSelector";
 import type { Platform } from "./assets/hooks/useGame";
+
+export interface GameQuery{
+  genre: Genre | null;
+  platform: Platform | null;
+}
+
 const App = () => {
-  const  [selectedGenre , setSelectedGenre] = useState<Genre | null>(null);
-  const [selectedPlatform , setSelectedPlatform] = useState<Platform | null>(null);
+  const [gameQuery , setGameQuery] = useState<GameQuery>({} as GameQuery)
+
+
   return (
     <div>
       <Grid
@@ -27,12 +33,12 @@ const App = () => {
         </GridItem>
         <Stack hideBelow="lg">
         <GridItem area="aside" paddingX={5}  >
-          {/* <GenereList onSelectGenre={(genre) => setSelectedGenre(genre)} selectedGenre={selectedGenre}></GenereList> */}
+          {/* <GenereList onSelectGenre={(genre) => setGameQuery({...gameQuery , genre})} selectedGenre={gameQuery.genre}></GenereList> */}
         </GridItem>
         </Stack>
         <GridItem area="main">
-          <PlatformSelector selectPlatform={selectedPlatform} onSelectPlatform={(platform) => setSelectedPlatform(platform)}/>
-           {/* <GameGrid selectPlatform={selectedPlatform} selectGenre={selectedGenre}></GameGrid> */}
+          {/* <PlatformSelector selectPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({...gameQuery , platform})}/> */}
+           {/* <GameGrid gameQuery={gameQuery}></GameGrid> */}
         </GridItem>
       </Grid>
     </div>
