@@ -4,7 +4,7 @@ import GenereList from "./components/GenereList";
 import { useState } from "react";
 import type { Genre } from "./hooks/useGeneres";
 import PlatformSelector from "./components/PlatformSelector";
-import type { Platform } from "./hooks/useGame";
+import type { Platform } from "./hooks/usePlatform";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 import { motion, useScroll, useTransform } from "motion/react";
