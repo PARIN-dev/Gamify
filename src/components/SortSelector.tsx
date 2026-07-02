@@ -1,4 +1,5 @@
 import { Button, Menu } from '@chakra-ui/react'
+import { motion } from 'motion/react';
 import { BsChevronDown } from 'react-icons/bs'
 
 interface Props{
@@ -17,6 +18,7 @@ const SortSelector = ({sortOrder ,onSelectSortOrders}: Props) => {
     ]
     const currentSortOrder = sortOrders.find(order => sortOrder===order.value);
   return (
+    <motion.div initial={{x:2000}} animate={{x:0}} transition={{duration:0.8}}>
      <Menu.Root>
             <Menu.Trigger asChild>
                 <Button size={"md"} variant={"outline"}>
@@ -31,6 +33,7 @@ const SortSelector = ({sortOrder ,onSelectSortOrders}: Props) => {
                 </Menu.Content>
             </Menu.Positioner>
         </Menu.Root>
+    </motion.div>
   )
 }
 

@@ -2,6 +2,7 @@ import { HStack, Icon, Switch, Text } from "@chakra-ui/react";
 import { useColorMode } from "@/componentsChakraUI/ui/color-mode";
 import { FaMoon, FaSun } from "react-icons/fa";
 
+
 const ColorModeSwitch = () => {
   const {colorMode ,toggleColorMode} = useColorMode();
 
