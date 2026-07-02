@@ -22,7 +22,7 @@ const PlatformSelector = ({ selectPlatform, onSelectPlatform }: Props) => {
           </Button>
         </Menu.Trigger>
         <Menu.Positioner>
-          <Menu.ItemGroup>
+          <Menu.ItemGroup zIndex={2000} bg={"black"} paddingX={"6px"}>
             {data?.results.map((platform) => (
               <MenuItemMotion
                 initial={{ opacity: 0 }}

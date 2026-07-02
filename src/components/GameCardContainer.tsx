@@ -10,7 +10,7 @@ const GameCardContainer = ({children}:Props) => {
      <motion.div
         layout
         whileHover={{
-          scale: 1.3,
+          scale: 1.2,
           zIndex: 100
         }}
         transition={{
